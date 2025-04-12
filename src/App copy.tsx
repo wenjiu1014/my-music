@@ -1,10 +1,15 @@
 import React, { Suspense } from 'react'
 import { useRoutes } from 'react-router-dom'
 import routes from './router'
+// import { useAppSelector, useAppDispatch } from './store/hooks'
+// import { shallowEqual } from 'react-redux'
+// import { increment, decrement } from './store/modules/counter'
 import AppHeader from './compoments/app-header'
 import AppFooter from './compoments/app-footer'
 
 function App() {
+  // const count = useAppSelector(state => state.counter.count, shallowEqual)
+  // const dispatch = useAppDispatch()
   return (
     <div className="App">
       <AppHeader />
@@ -13,6 +18,11 @@ function App() {
         <Suspense fallback={''}>{useRoutes(routes)}</Suspense>
       </div>
       <AppFooter />
+      {/* <div>
+        <button onClick={() => dispatch(increment())}>+</button>
+        <span>{count}</span>
+        <button onClick={() => dispatch(decrement())}>-</button>
+      </div> */}
     </div>
   )
 }
