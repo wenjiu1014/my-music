@@ -1,0 +1,35 @@
+@use '@/assets/css/theme.scss' as *;
+
+.root {
+  height: 30px;
+  background-color: $primary-color;
+
+  .wrap-v1 {
+    width: 1100px;
+    margin: 0 auto;
+  }
+  .nav {
+    display: flex;
+    padding-left: 271px;
+    position: relative;
+    top: -4px;
+    .item {
+      a {
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 13px;
+        margin: 7px 17px 0;
+        color: #fff;
+        font-size: 12px;
+
+        &:hover,
+        &.active {
+          text-decoration: none;
+          background-color: #9b0909;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
